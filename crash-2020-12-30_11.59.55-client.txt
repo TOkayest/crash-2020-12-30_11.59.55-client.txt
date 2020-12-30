@@ -1,0 +1,229 @@
+---- Minecraft Crash Report ----
+// There are four lights!
+
+Time: 12/30/20 11:59 AM
+Description: Initializing game
+
+org.spongepowered.asm.mixin.transformer.throwables.MixinTransformerError: An unexpected critical error was encountered
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:363) ~[mixin-0.8.2.jar:0.8.2+unknown-b0.git-unknown] {}
+	at org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClass(MixinTransformer.java:223) ~[mixin-0.8.2.jar:0.8.2+unknown-b0.git-unknown] {}
+	at org.spongepowered.asm.mixin.transformer.MixinTransformationHandler.processClass(MixinTransformationHandler.java:121) ~[mixin-0.8.2.jar:0.8.2+unknown-b0.git-unknown] {}
+	at org.spongepowered.asm.launch.MixinLaunchPlugin.processClass(MixinLaunchPlugin.java:131) ~[mixin-0.8.2.jar:0.8.2+unknown-b0.git-unknown] {}
+	at cpw.mods.modlauncher.serviceapi.ILaunchPluginService.processClassWithFlags(ILaunchPluginService.java:154) ~[modlauncher-8.0.6.jar:8.0.6+85+master.325de55] {}
+	at cpw.mods.modlauncher.LaunchPluginHandler.offerClassNodeToPlugins(LaunchPluginHandler.java:85) ~[modlauncher-8.0.6.jar:?] {}
+	at cpw.mods.modlauncher.ClassTransformer.transform(ClassTransformer.java:119) ~[modlauncher-8.0.6.jar:?] {}
+	at cpw.mods.modlauncher.TransformingClassLoader$DelegatedClassLoader.findClass(TransformingClassLoader.java:265) ~[modlauncher-8.0.6.jar:?] {}
+	at cpw.mods.modlauncher.TransformingClassLoader.loadClass(TransformingClassLoader.java:136) ~[modlauncher-8.0.6.jar:?] {re:classloading}
+	at cpw.mods.modlauncher.TransformingClassLoader.loadClass(TransformingClassLoader.java:98) ~[modlauncher-8.0.6.jar:?] {re:classloading}
+	at java.lang.ClassLoader.loadClass(Unknown Source) ~[?:1.8.0_171] {}
+	at net.minecraft.client.Minecraft.<init>(Minecraft.java:478) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.main.Main.main(Main.java:149) ~[1.16.4-forge-35.1.28.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_171] {}
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_171] {}
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_171] {}
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[?:1.8.0_171] {}
+	at net.minecraftforge.fml.loading.FMLClientLaunchProvider.lambda$launchService$0(FMLClientLaunchProvider.java:51) ~[forge-1.16.4-35.1.28.jar:35.1] {}
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-8.0.6.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54) [modlauncher-8.0.6.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:72) [modlauncher-8.0.6.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:82) [modlauncher-8.0.6.jar:?] {re:classloading}
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:66) [modlauncher-8.0.6.jar:?] {re:classloading}
+Caused by: org.spongepowered.asm.mixin.injection.throwables.InjectionError: Critical injection failure: Redirector cullParticles(Lnet/minecraft/client/particle/Particle;Lcom/mojang/blaze3d/vertex/IVertexBuilder;Lnet/minecraft/client/renderer/ActiveRenderInfo;F)V in cullparticles.mixins.json:MixinParticleManager failed injection check, (0/1) succeeded. Scanned 1 target(s). Using refmap cullparticles.refmap.json
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.postInject(InjectionInfo.java:408) ~[mixin-0.8.2.jar:0.8.2+unknown-b0.git-unknown] {}
+	at org.spongepowered.asm.mixin.transformer.MixinTargetContext.applyInjections(MixinTargetContext.java:1291) ~[mixin-0.8.2.jar:0.8.2+unknown-b0.git-unknown] {}
+	at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.applyInjections(MixinApplicatorStandard.java:1042) ~[mixin-0.8.2.jar:0.8.2+unknown-b0.git-unknown] {}
+	at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.applyMixin(MixinApplicatorStandard.java:395) ~[mixin-0.8.2.jar:0.8.2+unknown-b0.git-unknown] {}
+	at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.apply(MixinApplicatorStandard.java:320) ~[mixin-0.8.2.jar:0.8.2+unknown-b0.git-unknown] {}
+	at org.spongepowered.asm.mixin.transformer.TargetClassContext.applyMixins(TargetClassContext.java:345) ~[mixin-0.8.2.jar:0.8.2+unknown-b0.git-unknown] {}
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:569) ~[mixin-0.8.2.jar:0.8.2+unknown-b0.git-unknown] {}
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:351) ~[mixin-0.8.2.jar:0.8.2+unknown-b0.git-unknown] {}
+	... 22 more
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Stacktrace:
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:363) ~[mixin-0.8.2.jar:0.8.2+unknown-b0.git-unknown] {}
+	at org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClass(MixinTransformer.java:223) ~[mixin-0.8.2.jar:0.8.2+unknown-b0.git-unknown] {}
+	at org.spongepowered.asm.mixin.transformer.MixinTransformationHandler.processClass(MixinTransformationHandler.java:121) ~[mixin-0.8.2.jar:0.8.2+unknown-b0.git-unknown] {}
+	at org.spongepowered.asm.launch.MixinLaunchPlugin.processClass(MixinLaunchPlugin.java:131) ~[mixin-0.8.2.jar:0.8.2+unknown-b0.git-unknown] {}
+	at cpw.mods.modlauncher.serviceapi.ILaunchPluginService.processClassWithFlags(ILaunchPluginService.java:154) ~[modlauncher-8.0.6.jar:8.0.6+85+master.325de55] {}
+	at cpw.mods.modlauncher.LaunchPluginHandler.offerClassNodeToPlugins(LaunchPluginHandler.java:85) ~[modlauncher-8.0.6.jar:?] {}
+	at cpw.mods.modlauncher.ClassTransformer.transform(ClassTransformer.java:119) ~[modlauncher-8.0.6.jar:?] {}
+	at cpw.mods.modlauncher.TransformingClassLoader$DelegatedClassLoader.findClass(TransformingClassLoader.java:265) ~[modlauncher-8.0.6.jar:?] {}
+	at cpw.mods.modlauncher.TransformingClassLoader.loadClass(TransformingClassLoader.java:136) ~[modlauncher-8.0.6.jar:?] {re:classloading}
+	at cpw.mods.modlauncher.TransformingClassLoader.loadClass(TransformingClassLoader.java:98) ~[modlauncher-8.0.6.jar:?] {re:classloading}
+	at java.lang.ClassLoader.loadClass(Unknown Source) ~[?:1.8.0_171] {}
+	at net.minecraft.client.Minecraft.<init>(Minecraft.java:478) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+-- Initialization --
+Details:
+Stacktrace:
+	at net.minecraft.client.main.Main.main(Main.java:149) ~[1.16.4-forge-35.1.28.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_171] {}
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_171] {}
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_171] {}
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[?:1.8.0_171] {}
+	at net.minecraftforge.fml.loading.FMLClientLaunchProvider.lambda$launchService$0(FMLClientLaunchProvider.java:51) ~[forge-1.16.4-35.1.28.jar:35.1] {}
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-8.0.6.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54) [modlauncher-8.0.6.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:72) [modlauncher-8.0.6.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:82) [modlauncher-8.0.6.jar:?] {re:classloading}
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:66) [modlauncher-8.0.6.jar:?] {re:classloading}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.16.4
+	Minecraft Version ID: 1.16.4
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_171, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 4324126704 bytes (4123 MB) / 5200936960 bytes (4960 MB) up to 5200936960 bytes (4960 MB)
+	CPUs: 4
+	JVM Flags: 10 total; -Xmn128M -Xmx4952M -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump -Xss1M -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:G1NewSizePercent=20 -XX:G1ReservePercent=20 -XX:MaxGCPauseMillis=50 -XX:G1HeapRegionSize=32M
+	ModLauncher: 8.0.6+85+master.325de55
+	ModLauncher launch target: fmlclient
+	ModLauncher naming: srg
+	ModLauncher services: 
+		/mixin-0.8.2.jar mixin PLUGINSERVICE 
+		/eventbus-3.0.5-service.jar eventbus PLUGINSERVICE 
+		/forge-1.16.4-35.1.28.jar object_holder_definalize PLUGINSERVICE 
+		/forge-1.16.4-35.1.28.jar runtime_enum_extender PLUGINSERVICE 
+		/accesstransformers-2.2.0-shadowed.jar accesstransformer PLUGINSERVICE 
+		/forge-1.16.4-35.1.28.jar capability_inject_definalize PLUGINSERVICE 
+		/forge-1.16.4-35.1.28.jar runtimedistcleaner PLUGINSERVICE 
+		/mixin-0.8.2.jar mixin TRANSFORMATIONSERVICE 
+		/forge-1.16.4-35.1.28.jar fml TRANSFORMATIONSERVICE 
+		/MixinBootstrap-1.0.5.jar mixinbootstrap TRANSFORMATIONSERVICE 
+	FML: 35.1
+	Forge: net.minecraftforge:35.1.28
+	FML Language Providers: 
+		javafml@35.1
+		minecraft@1
+	Mod List: 
+		CyclopsCore-1.16.4-1.9.1.jar                      |Cyclops Core                  |cyclopscore                   |1.9.1               |COMMON_SET|NOSIGNATURE
+		IntegratedTerminals-1.16.4-1.0.16.jar             |IntegratedTerminals           |integratedterminals           |1.0.16              |COMMON_SET|NOSIGNATURE
+		mcw-windows-1.0.2-mc1.16.4.jar                    |Macaw's Windows               |mcwwindows                    |1.0.2               |COMMON_SET|NOSIGNATURE
+		torohealth-1.16.4-forge-4.jar                     |ToroHealth                    |torohealth                    |NONE                |COMMON_SET|NOSIGNATURE
+		modnametooltip_1.16.2-1.15.0.jar                  |Mod Name Tooltip              |modnametooltip                |1.15.0              |COMMON_SET|NOSIGNATURE
+		essentials-1.16.4-2.9.6.jar                       |Essentials                    |essentials                    |1.16.4-2.9.6        |COMMON_SET|NOSIGNATURE
+		ForgeEndertech-1.16.4-7.0.8.0-build.0028.jar      |Forge Endertech               |forgeendertech                |7.0.8.0             |COMMON_SET|NOSIGNATURE
+		CTM-MC1.16.1-1.1.2.6.jar                          |ConnectedTexturesMod          |ctm                           |MC1.16.1-1.1.2.6    |COMMON_SET|NOSIGNATURE
+		Controlling-7.0.0.11.jar                          |Controlling                   |controlling                   |7.0.0.11            |COMMON_SET|NOSIGNATURE
+		citadel-1.5.3.jar                                 |Citadel                       |citadel                       |1.5.3               |COMMON_SET|NOSIGNATURE
+		NoFog-1.16.2-Forge-b1.jar                         |NoFog                         |nofog                         |1.0.1               |COMMON_SET|NOSIGNATURE
+		rangedpumps-0.8.2.jar                             |Ranged Pumps                  |rangedpumps                   |0.8.2               |COMMON_SET|NOSIGNATURE
+		Bookshelf-1.16.4-9.3.18.jar                       |Bookshelf                     |bookshelf                     |9.3.18              |COMMON_SET|ea:45:b3:82:b6:9d:50:16:95:e7:2e:34:e1:92:d5:b4:9b:69:90:d3:4f:2e:71:99:b0:be:40:80:27:1f:3e:b0
+		mcw-doors-1.0.1fix-mc1.16.4.jar                   |Macaw's Doors                 |mcwdoors                      |1.0.1               |COMMON_SET|NOSIGNATURE
+		MekanismGenerators-1.16.4-10.0.18.445.jar         |Mekanism: Generators          |mekanismgenerators            |10.0.18             |COMMON_SET|NOSIGNATURE
+		Hwyla-forge-1.10.11-B78_1.16.2.jar                |Waila                         |waila                         |1.10.11-B78_1.16.2  |COMMON_SET|NOSIGNATURE
+		dynviewdist-1.7.jar                               |Dynamic view distance         |dynview                       |1.7                 |COMMON_SET|NOSIGNATURE
+		FpsReducer-mc1.16.4-1.18.jar                      |FPS Reducer                   |fpsreducer                    |mc1.16.4-1.18       |COMMON_SET|NOSIGNATURE
+		colorfulhealthbar-4.0.0-1.16.1.jar                |Colorful Health Bar           |colorfulhealthbar             |4.0.0-1.16.1        |COMMON_SET|NOSIGNATURE
+		XNetGases-1.16.4-2.1.1.jar                        |XNet Gases                    |xnetgases                     |2.1.1               |COMMON_SET|NOSIGNATURE
+		refinedstorage-1.9.9.jar                          |Refined Storage               |refinedstorage                |1.9.9               |COMMON_SET|NOSIGNATURE
+		mcw-bridges-1.0.4-mc1.16.4.jar                    |Macaw's Bridges               |mcwbridges                    |1.0.4               |COMMON_SET|NOSIGNATURE
+		industrial-foregoing-1.16.4-3.2.7-7d95990.jar     |Industrial Foregoing          |industrialforegoing           |3.2.7               |COMMON_SET|NOSIGNATURE
+		TipTheScales-1.16.4-3.0.0.10.jar                  |TipTheScales                  |tipthescales                  |3.0.0.10            |COMMON_SET|NOSIGNATURE
+		entangled-1.2.9-mc1.16.4.jar                      |Entangled                     |entangled                     |1.2.9               |COMMON_SET|NOSIGNATURE
+		CommonCapabilities-1.16.4-2.5.4.jar               |CommonCapabilities            |commoncapabilities            |2.5.4               |COMMON_SET|NOSIGNATURE
+		AmbientSounds_v3.1.4_mc1.16.4.jar                 |Ambient Sounds                |ambientsounds                 |3.0.3               |COMMON_SET|NOSIGNATURE
+		BiomesOPlenty-1.16.4-13.0.0.426-universal.jar     |Biomes O' Plenty              |biomesoplenty                 |1.16.4-13.0.0.426   |COMMON_SET|NOSIGNATURE
+		MekanismAdditions-1.16.4-10.0.18.445.jar          |Mekanism: Additions           |mekanismadditions             |10.0.18             |COMMON_SET|NOSIGNATURE
+		toughnessbar-6.1.jar                              |Toughness Bar                 |toughnessbar                  |6.1                 |COMMON_SET|NOSIGNATURE
+		mcw-trapdors-1.0.0-mc1.16.4.jar                   |Macaw's Trapdoors             |mcwtrpdoors                   |1.0.0               |COMMON_SET|NOSIGNATURE
+		fairylights-4.0.4-1.16.4.jar                      |Fairy Lights                  |fairylights                   |4.0.4               |COMMON_SET|NOSIGNATURE
+		curios-forge-1.16.4-4.0.3.0.jar                   |Curios API                    |curios                        |1.16.4-4.0.3.0      |COMMON_SET|NOSIGNATURE
+		Patchouli-1.16.4-48.jar                           |Patchouli                     |patchouli                     |1.16.4-48           |COMMON_SET|NOSIGNATURE
+		leap-1.16.4-1.0.1.jar                             |Leap                          |leap                          |1.0.1               |COMMON_SET|NOSIGNATURE
+		collective-1.16.4-1.53.jar                        |Collective                    |collective                    |1.53                |COMMON_SET|NOSIGNATURE
+		extlights-3.3.jar                                 |Extended Lights               |extlights                     |3.3                 |COMMON_SET|NOSIGNATURE
+		youmatter-1.16.4-2.1.0.jar                        |YouMatter                     |youmatter                     |1.16.4-2.1.0        |COMMON_SET|NOSIGNATURE
+		IntegratedTunnels-1.16.4-1.6.14.jar               |IntegratedTunnels             |integratedtunnels             |1.6.14              |COMMON_SET|NOSIGNATURE
+		elevatorid-1.16.4-1.7.8.jar                       |Elevator Mod                  |elevatorid                    |1.16.4-1.7.8        |COMMON_SET|NOSIGNATURE
+		Chunk+Pregenerator-V1.16-3.0.1.jar                |Chunk Pregenerator            |chunkpregen                   |V1.16-3.0.1         |COMMON_SET|NOSIGNATURE
+		Runelic-1.16.4-6.0.2.jar                          |Runelic                       |runelic                       |6.0.2               |COMMON_SET|ea:45:b3:82:b6:9d:50:16:95:e7:2e:34:e1:92:d5:b4:9b:69:90:d3:4f:2e:71:99:b0:be:40:80:27:1f:3e:b0
+		ExtraStorage-1.16.4-1.2.1.jar                     |Extra Storage                 |extrastorage                  |1.2.1               |COMMON_SET|NOSIGNATURE
+		constructionwand-1.16.2-1.7.jar                   |Construction Wand             |constructionwand              |1.16.2-1.7          |COMMON_SET|NOSIGNATURE
+		SpartanWeaponry-1.16.4-2.1.0-beta-1.jar           |Spartan Weaponry              |spartanweaponry               |2.1.0 beta 1        |COMMON_SET|NOSIGNATURE
+		simple_fps-1.16.X-1.2.0.jar                       |Simple FPS                    |simple_fps                    |1.2.0               |COMMON_SET|NOSIGNATURE
+		weirdinggadget-1.16.(2-4)-2.2.7.jar               |The Weirding Gadget           |weirdinggadget                |2.2.7               |COMMON_SET|NOSIGNATURE
+		ItemPhysic_v1.4.14_mc1.16.4.jar                   |ItemPhysic                    |itemphysic                    |1.6.0               |COMMON_SET|NOSIGNATURE
+		trashcans-1.0.5-mc1.16.4.jar                      |Trash Cans                    |trashcans                     |1.0.5               |COMMON_SET|NOSIGNATURE
+		TrampleStopper-2.4.8+mc-1.16.4.jar                |Trample Stopper               |tramplestopper                |2.4.8+mc-1.16.4     |COMMON_SET|23:8f:95:0f:65:ec:2e:38:99:79:f4:bc:47:8a:0b:df:29:ef:2d:82:66:20:09:20:02:dc:4a:15:97:45:f8:43
+		BetterBurning-1.16.4-5.0.2.jar                    |BetterBurning                 |betterburning                 |5.0.2               |COMMON_SET|ea:45:b3:82:b6:9d:50:16:95:e7:2e:34:e1:92:d5:b4:9b:69:90:d3:4f:2e:71:99:b0:be:40:80:27:1f:3e:b0
+		FastLeafDecay-v25.jar                             |FastLeafDecay                 |fastleafdecay                 |v25                 |COMMON_SET|NOSIGNATURE
+		CodeChickenLib-1.16.4-3.5.0.401-universal.jar     |CodeChicken Lib               |codechickenlib                |3.5.0.401           |COMMON_SET|31:e6:db:63:47:4a:6e:e0:0a:2c:11:d1:76:db:4e:82:ff:56:2d:29:93:d2:e5:02:bd:d3:bd:9d:27:47:a5:71
+		cullparticles-2.0-1.16.2.jar                      |Cull Particles                |cullparticles                 |2.0-1.16.2          |COMMON_SET|NOSIGNATURE
+		doubledoors_1.16.4-2.1.jar                        |Double Doors                  |doubledoors                   |2.1                 |COMMON_SET|NOSIGNATURE
+		BedBenefits-1.16.4-4.0.2.jar                      |BedBenefits                   |bedbenefits                   |4.0.2               |COMMON_SET|ea:45:b3:82:b6:9d:50:16:95:e7:2e:34:e1:92:d5:b4:9b:69:90:d3:4f:2e:71:99:b0:be:40:80:27:1f:3e:b0
+		InventorySpam-1.16.2-1.2.5.jar                    |Inventory Spam                |inventoryspam                 |version             |COMMON_SET|NOSIGNATURE
+		jei-1.16.4-7.6.0.62.jar                           |Just Enough Items             |jei                           |7.6.0.62            |COMMON_SET|NOSIGNATURE
+		AttributeFix-1.16.4-9.0.2.jar                     |AttributeFix                  |attributefix                  |9.0.2               |COMMON_SET|ea:45:b3:82:b6:9d:50:16:95:e7:2e:34:e1:92:d5:b4:9b:69:90:d3:4f:2e:71:99:b0:be:40:80:27:1f:3e:b0
+		abnormals_core-1.16.4-3.0.4.jar                   |Abnormals Core                |abnormals_core                |3.0.4               |COMMON_SET|NOSIGNATURE
+		addendum-1.16.4-1.2.0.jar                         |Addendum                      |addendum                      |1.2.0               |COMMON_SET|NOSIGNATURE
+		Mekanism-1.16.4-10.0.18.445.jar                   |Mekanism                      |mekanism                      |10.0.18             |COMMON_SET|NOSIGNATURE
+		caelus-forge-1.16.4-2.1.0.0.jar                   |Caelus API                    |caelus                        |1.16.4-2.1.0.0      |COMMON_SET|NOSIGNATURE
+		WAWLA-1.16.4-7.0.2.jar                            |WAWLA                         |wawla                         |7.0.2               |COMMON_SET|ea:45:b3:82:b6:9d:50:16:95:e7:2e:34:e1:92:d5:b4:9b:69:90:d3:4f:2e:71:99:b0:be:40:80:27:1f:3e:b0
+		invtweaks-1.16.4-1.0.1.jar                        |Inventory Tweaks Renewed      |invtweaks                     |1.16.4-1.0.1        |COMMON_SET|NOSIGNATURE
+		Clumps-6.0.0.13.jar                               |Clumps                        |clumps                        |6.0.0.13            |COMMON_SET|NOSIGNATURE
+		tumbleweed-1.16-0.4.9.jar                         |Tumbleweed                    |tumbleweed                    |1.16-0.4.9          |COMMON_SET|NOSIGNATURE
+		SereneSeasons-1.16.4-4.0.0.83-universal.jar       |Serene Seasons                |sereneseasons                 |1.16.4-4.0.0.76     |COMMON_SET|NOSIGNATURE
+		AdHooks-1.16.4-6.1.2.0-build.0027.jar             |Advanced Hook Launchers       |adhooks                       |6.1.2.0             |COMMON_SET|NOSIGNATURE
+		curioofundying-forge-1.16.4-5.1.0.0.jar           |Curio of Undying              |curioofundying                |1.16.4-5.1.0.0      |COMMON_SET|NOSIGNATURE
+		demagnetize-forge-1.16.2-1.2.2.jar                |Demagnetize                   |demagnetize                   |1.16.2-1.2.2        |COMMON_SET|NOSIGNATURE
+		mcjtylib-1.16-5.0.15.jar                          |McJtyLib                      |mcjtylib                      |1.16-5.0.15         |COMMON_SET|NOSIGNATURE
+		rftoolsbase-1.16-2.0.9.jar                        |RFToolsBase                   |rftoolsbase                   |1.16-2.0.9          |COMMON_SET|NOSIGNATURE
+		xnet-1.16-3.0.11.jar                              |XNet                          |xnet                          |1.16-3.0.11         |COMMON_SET|NOSIGNATURE
+		rftoolsstorage-1.16-2.0.8.jar                     |RFToolsStorage                |rftoolsstorage                |1.16-2.0.8          |COMMON_SET|NOSIGNATURE
+		rftoolscontrol-1.16-4.0.6.jar                     |RFToolsControl                |rftoolscontrol                |1.16-4.0.6          |COMMON_SET|NOSIGNATURE
+		A+Block+of+Charcoal-1.2.jar                       |A Block of Charcoal           |charcoalblock                 |1.2                 |COMMON_SET|NOSIGNATURE
+		iceandfire-2.1.4-1.16.4.jar                       |Ice and Fire                  |iceandfire                    |2.1.4-1.16.4        |COMMON_SET|NOSIGNATURE
+		rftoolspower-1.16-3.0.8.jar                       |RFToolsPower                  |rftoolspower                  |1.16-3.0.8          |COMMON_SET|NOSIGNATURE
+		forge-1.16.4-35.1.28-universal.jar                |Forge                         |forge                         |35.1.28             |COMMON_SET|22:af:21:d8:19:82:7f:93:94:fe:2b:ac:b7:e4:41:57:68:39:87:b1:a7:5c:c6:44:f9:25:74:21:14:f5:0d:90
+		WailaHarvestability-mc1.16.2-forge-1.1.13.jar     |Waila Harvestability          |wailaharvestability           |1.1.13              |COMMON_SET|NOSIGNATURE
+		scuba-gear-1.16.4-1.0.1.jar                       |Scuba Gear                    |scuba_gear                    |1.0.1               |COMMON_SET|NOSIGNATURE
+		FasterLadderClimbing-1.16.4-0.2.1.jar             |Faster Ladder Climbing        |fasterladderclimbing          |1.16.4-0.2.1        |COMMON_SET|NOSIGNATURE
+		DynamicSurroundings-1.16.4-4.0.1.4.jar            |§3Dynamic Surroundings        |dsurround                     |1.16.4-4.0.1.3      |COMMON_SET|b4:98:14:b9:76:55:25:4f:e5:5f:4d:71:90:87:43:5b:f9:d5:3a:02:60:42:5e:da:1f:15:9c:ff:be:a9:7c:77
+		dash-1.16.4-1.0.1.jar                             |Dash                          |dash                          |1.0.1               |COMMON_SET|NOSIGNATURE
+		IntegratedCrafting-1.16.4-1.0.10.jar              |IntegratedCrafting            |integratedcrafting            |1.0.10              |COMMON_SET|NOSIGNATURE
+		forge-1.16.4-35.1.28-client.jar                   |Minecraft                     |minecraft                     |1.16.4              |COMMON_SET|NOSIGNATURE
+		rftoolsutility-1.16-3.0.20.jar                    |RFToolsUtility                |rftoolsutility                |1.16-3.0.20         |COMMON_SET|NOSIGNATURE
+		EnchantmentDescriptions-1.16.4-6.0.2.jar          |EnchantmentDescriptions       |enchdesc                      |6.0.2               |COMMON_SET|ea:45:b3:82:b6:9d:50:16:95:e7:2e:34:e1:92:d5:b4:9b:69:90:d3:4f:2e:71:99:b0:be:40:80:27:1f:3e:b0
+		theoneprobe-1.16-3.0.6.jar                        |The One Probe                 |theoneprobe                   |1.16-3.0.6          |COMMON_SET|NOSIGNATURE
+		MouseTweaks-2.13-mc1.16.2.jar                     |Mouse Tweaks                  |mousetweaks                   |2.13                |COMMON_SET|NOSIGNATURE
+		titanium-1.16.4-3.2.4.jar                         |Titanium                      |titanium                      |3.2.4               |COMMON_SET|NOSIGNATURE
+		Psi+1.16-88.jar                                   |Psi                           |psi                           |1.16-88             |COMMON_SET|NOSIGNATURE
+		CreativeCore_v2.0.10_mc1.16.4.jar                 |CreativeCore                  |creativecore                  |2.0.0               |COMMON_SET|NOSIGNATURE
+		ChickenChunks-1.16.4-2.7.0.85-universal.jar       |ChickenChunks                 |chickenchunks                 |2.7.0.85            |COMMON_SET|31:e6:db:63:47:4a:6e:e0:0a:2c:11:d1:76:db:4e:82:ff:56:2d:29:93:d2:e5:02:bd:d3:bd:9d:27:47:a5:71
+		lepton-1.16.4-1.2.2.jar                           |Lepton                        |lepton                        |1.2.1               |COMMON_SET|NOSIGNATURE
+		car-1.16.4-1.0.5.jar                              |Ultimate Car Mod              |car                           |1.16.4-1.0.5        |COMMON_SET|NOSIGNATURE
+		rftoolsbuilder-1.16-3.0.13.jar                    |RFToolsBuilder                |rftoolsbuilder                |1.16-3.0.13         |COMMON_SET|NOSIGNATURE
+		jeiintegration_1.16.4-6.1.1.11.jar                |JEI Integration               |jeiintegration                |6.1.1.11            |COMMON_SET|NOSIGNATURE
+		Mantle-1.16.4-1.6.43.jar                          |Mantle                        |mantle                        |1.6.43              |COMMON_SET|NOSIGNATURE
+		IntegratedDynamics-1.16.4-1.1.20.jar              |IntegratedDynamics            |integrateddynamics            |1.1.20              |COMMON_SET|NOSIGNATURE
+		gravestone-1.16.4-1.0.7.jar                       |Gravestone Mod                |gravestone                    |1.16.4-1.0.7        |COMMON_SET|NOSIGNATURE
+		polymorph-forge-1.16.4-0.21.jar                   |Polymorph                     |polymorph                     |1.16.4-0.21         |COMMON_SET|NOSIGNATURE
+		AutoRegLib-1.6-47.jar                             |AutoRegLib                    |autoreglib                    |1.6-47              |COMMON_SET|NOSIGNATURE
+		Quark-r2.4-283.jar                                |Quark                         |quark                         |r2.4-283            |COMMON_SET|NOSIGNATURE
+		FluxNetworks-1.16.4-6.1.5.10.jar                  |Flux Networks                 |fluxnetworks                  |1.16.4-6.1.5.10     |COMMON_SET|NOSIGNATURE
+		performant-1.16.2-4-3.25m.jar                     |Performant                    |performant                    |3.25m               |COMMON_SET|NOSIGNATURE
+		MagmaMonsters-0.5.3.jar                           |MagmaMonsters                 |magma_monsters                |0.5.3               |COMMON_SET|NOSIGNATURE
+		AppleSkin-mc1.16.2-forge-1.0.14.jar               |AppleSkin                     |appleskin                     |1.0.14              |COMMON_SET|NOSIGNATURE
+		ilikewood-1.16.4-5.0.0.0.jar                      |I Like Wood                   |ilikewood                     |1.16.4-5.0.0.0      |COMMON_SET|NOSIGNATURE
+		forgemod_VoxelMap-1.10.14_for_1.16.4.jar          |VoxelMap                      |voxelmap                      |1.10.14             |COMMON_SET|NOSIGNATURE
+		refinedstorageaddons-0.7.2.jar                    |Refined Storage Addons        |refinedstorageaddons          |0.7.2               |COMMON_SET|NOSIGNATURE
+		overloadedarmorbar-5.1.0.jar                      |Overloaded Armor Bar          |overloadedarmorbar            |5.1.0               |COMMON_SET|NOSIGNATURE
+		magipsi-1.16.4-2.0.0.0.jar                        |Magical Psi                   |magipsi                       |1.16.4-2.0.0.0      |COMMON_SET|NOSIGNATURE
+	Crash Report UUID: 3e1bc220-a0a3-4512-bc65-def58435d86f
+	Launched Version: 1.16.4-forge-35.1.28
+	Backend library: LWJGL version 3.2.2 build 10
+	Backend API: Intel(R) HD Graphics 2500 GL version 4.0.0 - Build 10.18.10.5161, Intel
+	GL Caps: Using framebuffer using OpenGL 3.0
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'forge'
+	Type: Client (map_client.txt)
+	CPU: 4x Intel(R) Core(TM) i5-3470 CPU @ 3.20GHz
